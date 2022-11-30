@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.app .app-container .banner {
+    height: 1000px;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(to left, #0008ff, #ff1100);
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.app .app-container .banner .app-title {
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.app .app-container .banner .form-group {
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 30px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.app .app-container .banner .form-group .app-label {
+    background-color: rgba(38, 2, 53, 0.7254901961);
+    padding: 2px 5px;
+    color: white;
+    border-radius: 3px 0 0 3px;
+}
+
+.app .app-container .banner .form-group .app-select {
+    padding-left: 0px;
+}
+
+.app .app-container .banner .form-group .app-select .custom-select {
+    font-size: 1rem;
+    display: block;
+    width: 150px;
+    text-align: center;
+    border-radius: 0 3px 3px 0;
+}
+
+.app .app-container .banner .cartIcon {
+    margin-top: 30px;
+    position: absolute;
+    font-size: 2rem;
+    top: 0;
+    right: 0;
+    color: black;
+    border: none;
+    padding: 15px;
+    padding: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.app .app-container .banner .cartIcon .quantity {
+    position: absolute;
+    top: 0;
+    right: 1%;
+    font-size: 15px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    padding: none;
+    margin: none;
+    border-radius: 50%;
+    color: red;
+    line-height: 20px;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
+}
+
+.app .app-container .banner .cartIcon:hover {
+    color: white;
+}
+
+.app .app-container .banner .main-cart {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 90%;
+    height: auto;
+    margin: 5%;
+    align-self: center;
+    align-items: center;
+}
+
+.app .app-container .banner .main-cart .card {
+    padding: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    flex-shrink: 0;
+    height: auto;
+    width: 250px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all 0.5s;
+    font-size: 12px;
+    transition: all 0.5s;
+    margin-bottom: 10px;
+}
+
+.app .app-container .banner .main-cart .card .state {
+    text-align: right;
+    color: #8942a8;
+    padding-right: 15px;
+}
+
+.app .app-container .banner .main-cart .card .none {
+    display: none;
+}
+
+.app .app-container .banner .main-cart .card .img-container {
+    width: 185px;
+    height: 185px;
+    align-self: center;
+    padding: 30px 20px;
+    margin-bottom: 100px;
+}
+
+.app .app-container .banner .main-cart .card .img-container img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.app .app-container .banner .main-cart .card .details {
+    font-size: 10px;
+    position: absolute;
+    height: auto;
+    width: 100%;
+    background-color: #d1d6e5;
+    border-radius: 20px;
+    padding: 20px;
+    left: 0;
+    bottom: 0;
+    transition: 0.25s;
+}
+
+.app .app-container .banner .main-cart .card .details .title {
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+
+.app .app-container .banner .main-cart .card .details .info {
+    transition: all 0.5s;
+    display: none;
+}
+
+.app .app-container .banner .main-cart .card .details .display-info {
+    display: flex;
+    flex-direction: row;
+    vertical-align: bottom;
+    justify-content: space-between;
+}
+
+.app .app-container .banner .main-cart .card .details .display-info p {
+    font-size: 20px;
+    align-items: center;
+}
+
+.app .app-container .banner .main-cart .card .details .add-btn {
+    height: 40px;
+    border-radius: 20px;
+    border: solid;
+    border-width: 1px;
+    cursor: pointer;
+    font-size: 10px;
+    padding: 0 5px;
+    background-color: #d2d6e0;
+    transition: all 0.5s;
+}
+
+.app .app-container .banner .main-cart .card .details .add-btn:hover {
+    color: white;
+    background-color: #000000;
+}
+
+.app .app-container .banner .main-cart .card .qty-change div {
+    display: flex;
+    flex-direction: row;
+}
+
+.app .app-container .banner .main-cart .card:hover .details .info {
+    transition: all 0.5s;
+    display: block;
+}
+
+.app .app-container .banner .main-cart .card:hover {
+    height: 350px;
+    scale: 1.2;
+    z-index: 50;
+    margin: 50px 20px 50px 20px;
+}
+
+.app .app-container .banner .main-cart .none {
+    display: none;
+}
+
+.app .app-container .banner .card-transform #overlay {
+    top: 0;
+    right: 0;
+    position: absolute;
+    z-index: 100;
+    background-color: rgba(65, 18, 83, 0.4705882353);
+    width: 100%;
+    height: 100%;
+    -webkit-animation: mymoveIn 0.5s;
+    animation: mymoveIn 0.5s;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.app .app-container .banner .card-transform .cart {
+    z-index: 101;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: width 2s;
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    -webkit-animation: mymoveIn 0.5s;
+    animation: mymoveIn 0.5s;
+    transition: all 0.5s;
+    color: black;
+}
+
+.app .app-container .banner .card-transform .cart .closeCardBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 15px;
+    color: black;
+    background-color: white;
+    border: none;
+    transition: all 0.5s;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.app .app-container .banner .card-transform .cart .closeCardBtn:hover {
+    color: rgba(0, 0, 0, 0.247);
+}
+
+.app .app-container .banner .card-transform .cart h2 {
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 0px;
+}
+
+.app .app-container .banner .card-transform .cart .cart-items {
+    text-align: center;
+}
+
+.app .app-container .banner .card-transform .cart .cart-items .empty-cart {
+    display: block;
+}
+
+.app .app-container .banner .card-transform .cart .cart-items .has-cart {
+    display: none;
+}
+
+.app .app-container .banner .card-transform .cart .cart-items span {
+    color: black;
+}
+
+.app .app-container .banner .card-transform .cart .cart-items .table {
+    padding: 15px;
+    color: black;
+    width: 100%;
+}
+
+.app .app-container .banner .card-transform .cart .cart-items .table .text-white {
+    color: black;
+}
+
+.app .app-container .banner .card-transform .cart .cart-items .table .trash {
+    transition: all 0.5s;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.app .app-container .banner .card-transform .cart .cart-items .table .trash:hover {
+    color: rgba(0, 0, 0, 0.5843137255);
+}
+
+.app .app-container .banner .card-transform .cart .cart-items .table .quantityDec,
+.app .app-container .banner .card-transform .cart .cart-items .table .quantityInc {
+    cursor: pointer;
+    transition: all 0.5s;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    align-items: center;
+}
+
+.app .app-container .banner .card-transform .cart .cart-items .table .quantityDec:hover,
+.app .app-container .banner .card-transform .cart .cart-items .table .quantityInc:hover {
+    color: #ffffff;
+    background-color: black;
+}
+
+.app .app-container .banner .card-transform .cart .cart-items .table td {
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    background-color: white;
+}
+
+.app .app-container .banner .card-transform .cart .cart-items .table td .renderCartProducts {
+    width: 50px;
+    height: 50px;
+    margin: 5px 0px;
+}
+
+.app .app-container .banner .card-transform .cart .cart-items .table td::before {
+    content: "";
+    width: 105%;
+    height: 1px;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.app .app-container .banner .card-transform .cart .final {
+    width: 48%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0 15px 15px 0;
+    transition: all 0.5s;
+    color: black;
+}
+
+.app .app-container .banner .card-transform .cart .final strong {
+    font-size: 20px;
+    -webkit-animation: mymoveIn 0.1s;
+    animation: mymoveIn 0.1s;
+}
+
+.app .app-container .banner .card-transform .cart .final .action {
+    -webkit-animation: mymoveIn 0.1s;
+    animation: mymoveIn 0.1s;
+    transition: all 0.5s;
+}
+
+.app .app-container .banner .card-transform .cart .final .action .buy,
+.app .app-container .banner .card-transform .cart .final .action .clear {
+    font-size: 20px;
+    padding: 15px 5px;
+    margin: 0 5px;
+    transition: all 0.5;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.289);
+    border: none;
+    cursor: pointer;
+}
+
+.app .app-container .banner .card-transform .cart .final .action .buy:hover,
+.app .app-container .banner .card-transform .cart .final .action .clear:hover {
+    color: white;
+    text-shadow: white;
+    background-color: black;
+}
+
+.app .app-container .banner .card-transform .none {
+    display: none;
+}
+
+.app .app-container .banner .card-transform .changeBar {
+    animation-direction: reverse;
+}
+
+@-webkit-keyframes mymoveIn {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes mymoveIn {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+@-webkit-keyframes mymoveOut {
+    0% {
+        width: 50%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+@keyframes mymoveOut {
+    0% {
+        width: 50%;
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+@-webkit-keyframes backgroundAnimate {
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+@keyframes backgroundAnimate {
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+/*# sourceMappingURL=style.css.map */

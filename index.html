@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siêu thị điện tử</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- my style -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <section id="app" class="app">
+        <div class="app-container">
+            <div class="banner">
+                <div class="app-title">SIÊU THỊ ĐIỆN TỬ</div>
+                <div class="form-group row">
+                    <label for="selLoai" class="app-label">Show</label>
+                    <div class="app-select">
+                        <select class="custom-select" id="selLoai">
+                            <option selected="">Chọn loại</option>
+                            <option value="all">Tất cả</option>
+                            <option value="Samsung">Samsung</option>
+                            <option value="Iphone">Iphone</option>
+                        </select>
+                    </div>
+                </div>
+                <button onclick="openCartModel()">
+                    <i id="cartOpen" class="fa-solid fa-cart-shopping cartIcon">
+                        <p id="cartQuantity" class="quantity">0</p>
+                    </i>
+                </button>
+                <div id="main-cart" class="main-cart"></div>
+                <div class="card-transform" style="transition: all .5s;">
+                    <div id="overlay" class="none"></div>
+                    <div id="body-cart-shop" class="cart none">
+                        <div class="side-nav" style="right: 0px;">
+                            <button class="closeCardBtn" onclick="closeCartModel()"><i id="cartClose"
+                                    class="fas fa-times"></i></button>
+                            <h2>Cart</h2>
+                            <div class="cart-items">
+                                <span id="empty-cart" class="empty-cart">Looks Like You Haven't
+                                    Added Any Product In The Cart</span>
+                                <table class="table table-striped table-sm">
+                                    <thead>
+                                        <tr class="bg-warning text-white">
+                                            <th>Ảnh</th>
+                                            <th>Giá</th>
+                                            <th>Tên Sản Phẩm</th>
+                                            <th>Số lượng</th>
+                                            <th>Xóa</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbodyP"></tbody>
+                                </table>
+                            </div>
+                            <div class="final">
+                                <strong>Total: $ <span id="total" class="total">0</span></strong>
+                                <div class="action">
+                                    <button onclick="clearCart()" class="btn buy">Purchase <i class="fas fa-credit-card"
+                                            style="color:#6665dd;"></i></button>
+                                    <button onclick="clearCart()" class="btn clear">Clear Cart <i class="fas fa-trash"
+                                            style="color:#bb342f;"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./models/Products.js"></script>
+    <script src="./services/Products.js"></script>
+    <script src="./services/ProductService.js"></script>
+    <script src="./controllers/index.js"></script>
+</body>
+
+</html>
